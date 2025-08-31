@@ -1,0 +1,43 @@
+.front-card-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 25px;
+    transform: translateX(-20px);
+    border-radius: 10px;
+    background: linear-gradient(to right, #4568dc, #b06ab3);
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 30px;
+
+        .left-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; 
+            background-color: white;
+        }
+
+        .right-circle {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 1px solid white;
+        }
+    }
+
+    .card-number {
+        span {
+            font-size: 25px;
+            color: white;
+        }
+    }
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+    }
+}

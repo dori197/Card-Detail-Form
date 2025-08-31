@@ -1,0 +1,107 @@
+@import "/src/mixin/mixin.scss";
+
+.card-form {
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .name {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            label {
+                @include text-form;
+            }
+
+            input {
+                @include input;
+            }
+        }
+
+        .number {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            label {
+                @include text-form;
+            }
+
+            input {
+                @include input;
+            }
+        }
+
+        .description {
+            display: flex;
+            gap: 20px;
+
+            .time {
+                display: flex;
+                flex-direction: column;
+                width: 35%;
+                gap: 5px;
+
+                span {
+                    @include text-form;
+                }
+
+                .date {
+                    display: flex;
+                    gap: 5px;
+
+                    #MM {
+                        width: 50%;
+                        padding: 7px 4px;
+                        border-radius: 7px;
+                        border: none;
+                        outline: none;
+                        border: 1.5px solid gainsboro;
+                    }
+
+                    #YY {
+                        width: 50%;
+                        padding: 7px 4px;
+                        border-radius: 7px;
+                        border: none;
+                        outline: none;
+                        border: 1.5px solid gainsboro;
+                    }
+                }
+            }
+
+            .cvc {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                label {
+                    @include text-form;
+                }
+
+                input {
+                    @include input;
+                }
+            }
+        }
+
+        .submit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button {
+                cursor: pointer;
+                width: 50%;
+                padding: 12px;
+                font-size: 16px;
+                border: none;
+                border-radius: 10px;
+                color: white;
+                background-color: rgb(46, 17, 46);
+            }
+        }
+    }
+}

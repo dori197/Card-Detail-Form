@@ -1,0 +1,50 @@
+.behind-card-detail {
+    background-color: rgb(232, 232, 232);
+    position: relative;
+    height: 200px;
+    border-radius: 10px;
+    transform: translateX(60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .line {
+        position: absolute;
+        top: 12%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background-color: black;
+    }
+
+    .card-cvc {
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 3px;
+        padding: 7px 20px;
+        background-color: rgb(160, 160, 160);
+        margin: 50px 0 20px 0;
+
+        span {
+            display: flex;
+            justify-content: end;
+            color: white;
+        }
+    }
+
+    .under {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 50%;
+        margin: 0 auto;
+
+        hr {
+            width: 100%;
+            border: 1.5px solid rgb(160, 160, 160);
+        }
+
+    }
+}

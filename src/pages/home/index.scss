@@ -1,0 +1,27 @@
+.home {
+    display: flex;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        position: absolute;
+        top: 15%;
+        left: 16%;
+    }
+
+    .left-side {
+        width: 35%;
+        height: 100vh;
+        background: linear-gradient(to right, #ad5389, #3c1053);
+    }
+
+    .right-side {
+        flex-grow: 1;
+        height: 100vh;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        transform: translateX(-60px);
+    }
+}

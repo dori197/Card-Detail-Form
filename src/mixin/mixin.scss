@@ -1,0 +1,13 @@
+@mixin input {
+    padding: 7px 4px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    border: 1.5px solid gainsboro;
+}
+
+@mixin text-form {
+    font-size: 18px;
+    font-weight: 600;
+    font-style: oblique;
+}
