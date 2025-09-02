@@ -1,7 +1,7 @@
 import React from 'react'
 import "./index.scss";
 
-function FrontCardDetail() {
+function FrontCardDetail({ cardHolderName, cardHolderNumber, month, year }) {
   return (
     <div className='front-card-detail'>
       <div className="logo">
@@ -10,16 +10,16 @@ function FrontCardDetail() {
       </div>
 
       <div className="card-number">
-        <span>0000 0000 0000 0000</span>
+        <span>{ cardHolderNumber || '0000 0000 0000 0000' }</span>
       </div>
 
       <div className="info">
         <div className="card-owner">
-          <span>Michael Jackson</span>
+          <span>{ cardHolderName || 'Michael Jackson' }</span>
         </div>
 
         <div className="card-date">
-          <span>00/00</span>
+          <span>{ (month || '00') + '/' + (year || '00') }</span>
         </div>
       </div>
     </div>

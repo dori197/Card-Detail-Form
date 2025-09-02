@@ -1,19 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./index.scss";
 import CardForm from '../../components/card-form';
 import FrontCardDetail from '../../components/front-card-detail';
 import BehindCardDetail from '../../components/behind-card-detail copy';
 
 function Home() {
+
+  const [formData, setFormData] = useState({
+    cardHolderName: '',
+    cardHolderNumber: '',
+    month: '',
+    year: '',
+    cvc: '',
+  });
+
+  const handelDataChange = (data) => {
+    setFormData(data);
+  }
+
   return (
     <div className='home'>
       <div className="card">
         <div className="front-card">
-          <FrontCardDetail />
+          <FrontCardDetail
+            cardHolderName={formData.cardHolderName}
+            cardHolderNumber={formData.cardHolderNumber}
+            month={formData.month}
+            year={formData.year}
+          />
         </div>
 
         <div className="behind-card">
-          <BehindCardDetail />
+          <BehindCardDetail
+            cvc={formData.cvc}
+          />
         </div>
       </div>
 
@@ -21,7 +41,10 @@ function Home() {
       </div>
 
       <div className='right-side'>
-        <CardForm />
+        <CardForm 
+          formData={formData}
+          onDataChange={handelDataChange}
+        />
       </div>
     </div>
   )

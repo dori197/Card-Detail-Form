@@ -1,12 +1,12 @@
 import React from 'react'
 import "./index.scss";
 
-function BehindCardDetail() {
+function BehindCardDetail({ cvc }) {
   return (
     <div className='behind-card-detail'>
       <div className="line"></div>
       <div className="card-cvc">
-        <span>000</span>
+        <span>{ cvc || "000" }</span>
       </div>
       <div className='under'>
         <hr />
