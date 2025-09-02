@@ -17,6 +17,11 @@
 
             input {
                 @include input;
+
+                &:focus {
+                    transition: all 0.3s ease;
+                    @include focus-effect-shadow;
+                }
             }
         }
 
@@ -31,6 +36,11 @@
 
             input {
                 @include input;
+
+                &:focus {
+                    transition: all 0.3s ease;
+                    @include focus-effect-shadow;
+                }
             }
         }
 
@@ -59,6 +69,11 @@
                         border: none;
                         outline: none;
                         border: 1.5px solid gainsboro;
+
+                        &:focus {
+                            transition: all 0.3s ease;
+                            @include focus-effect-shadow;
+                        }
                     }
 
                     #YY {
@@ -68,6 +83,11 @@
                         border: none;
                         outline: none;
                         border: 1.5px solid gainsboro;
+
+                        &:focus {
+                            transition: all 0.3s ease;
+                            @include focus-effect-shadow;
+                        }
                     }
                 }
             }
@@ -83,6 +103,11 @@
 
                 input {
                     @include input;
+
+                    &:focus {
+                        transition: all 0.3s ease;
+                        @include focus-effect-shadow;
+                    }
                 }
             }
         }
@@ -95,12 +120,17 @@
             button {
                 cursor: pointer;
                 width: 50%;
-                padding: 12px;
+                padding: 17px;
                 font-size: 16px;
                 border: none;
                 border-radius: 10px;
                 color: white;
                 background-color: rgb(46, 17, 46);
+            }
+
+            &:active {
+                transform: scale(0.95);
+                transition: all 0.2s ease;
             }
         }
     }

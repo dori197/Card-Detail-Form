@@ -11,3 +11,7 @@
     font-weight: 600;
     font-style: oblique;
 }
+
+@mixin focus-effect-shadow {
+    box-shadow: rgba(56, 8, 60, 0.959) 0px 3px 8px;
+}
