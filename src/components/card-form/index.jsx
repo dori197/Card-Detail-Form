@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import "./index.scss";
 import axios from 'axios';
 import Loading from '../loading';
+import { useNavigate } from 'react-router-dom';
 
 function CardForm({ formData, onDataChange }) {
 
   const API_URL = "https://68ad6481a0b85b2f2cf324aa.mockapi.io/Users";
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleNameChange = (e) => {
     onDataChange({
@@ -58,6 +60,7 @@ function CardForm({ formData, onDataChange }) {
             cvc: '',
           })
           alert('ok r nhé bae');
+          navigate("/card-detail");
         }
       } catch (error) {
         console.log("Failed Post Data", error);
